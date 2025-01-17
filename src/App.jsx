@@ -9,7 +9,7 @@ import Home from './pages/Home.jsx'
 import Trading from './pages/Trading.jsx'
 
 const client = createThirdwebClient({
-	clientId: process.env.THIRDWEB_CLIENT,
+	clientId: '1b1e02b0a86b8e6819a1798f30b6d76b',
 })
 
 const wallets = [
