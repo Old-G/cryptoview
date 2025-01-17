@@ -9,4 +9,4 @@ const TokenBalanceSchema = new mongoose.Schema(
 	{ timestamps: true }
 )
 
-module.exports = mongoose.model('TokenBalance', TokenBalanceSchema)
+module.exports = mongoose.model('tokenBalance', TokenBalanceSchema)

@@ -47,14 +47,13 @@ const getTokenBalance = async (req, res) => {
 
 		const balance = await contract.methods.balanceOf(walletAddress).call()
 
-		let decimals = 18 // По умолчанию ставим 18, если метод `decimals` отсутствует
+		let decimals = 18
 		try {
 			decimals = await contract.methods.decimals().call()
 		} catch (e) {
 			console.warn('Decimals method not found, using default 18')
 		}
 
-		// Приведение BigInt к Number, чтобы избежать ошибок с делением
 		const formattedBalance = Number(balance) / 10 ** Number(decimals)
 
 		res.json({ walletAddress, contractAddress, balance: formattedBalance })

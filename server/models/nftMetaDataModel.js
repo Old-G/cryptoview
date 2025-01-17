@@ -11,4 +11,4 @@ const NftMetadataSchema = new mongoose.Schema(
 	{ timestamps: true }
 )
 
-module.exports = mongoose.model('nft-metadata', NftMetadataSchema)
+module.exports = mongoose.model('nftMetaData', NftMetadataSchema)
