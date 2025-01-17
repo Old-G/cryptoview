@@ -33,7 +33,7 @@ const getTokenBalance = async (req, res) => {
 			!web3.utils.isAddress(walletAddress) ||
 			!web3.utils.isAddress(contractAddress)
 		) {
-			return resc
+			return res
 				.status(400)
 				.json({ error: 'Invalid wallet or contract address' })
 		}
